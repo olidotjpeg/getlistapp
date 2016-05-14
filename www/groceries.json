@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Superhero Party Groceries",
+        "items": [
+            {
+                "name": "Milk"
+            },
+            {
+                "name": "Jelly-Beans"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "B1tsPls Failure Party",
+        "items": [
+            {
+                "name": "Poo"
+            },
+            {
+                "name": "Bananas"
+            }
+        ]
+    }
+]
