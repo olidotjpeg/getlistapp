@@ -13,17 +13,13 @@
 		activate();
 
 		function activate() {
-			GroceryFactory.getGroceries()
-			.then(function(response) {
-				vm.groceries = response;
-			})
-			.catch(function(err) {
-				console.log(err.data);
+			GroceryFactory.getUser(1).then(function(response) {
+				console.log(response);
 			})
 		}
 
 		function deleteGroceryItem(id) {
-			
+
 		}
 
 	}
