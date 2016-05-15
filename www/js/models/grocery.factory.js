@@ -15,9 +15,9 @@
 		return service;
 
 		function getUser(id) {
-			return $http.get('localhost:8080/api/users/' + id)
+			return $http.get('http://localhost:8080/api/users/' + id)
 				.then(function(response) {
-					return response;
+					return response.data;
 				});
 		}
 
