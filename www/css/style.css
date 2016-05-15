@@ -1,1 +1,11 @@
 /* Empty. Add your own CSS if you like */
+.scroll {
+    height: 100%;
+}
+
+.create {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}

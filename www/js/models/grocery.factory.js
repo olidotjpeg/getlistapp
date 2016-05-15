@@ -6,32 +6,36 @@
 	.factory('GroceryFactory', GroceryFactory);
 
 	function GroceryFactory($http) {
+		var API_URL = 'http://localhost:8080/api/';
+
 		var service = {
             getGroceries: getGroceries,
 			getGrocery: getGrocery,
-			getUser: getUser
+			postList: postList
 		};
 
 		return service;
 
-		function getUser(id) {
-			return $http.get('http://localhost:8080/api/users/' + id)
-				.then(function(response) {
-					return response.data;
-				});
-		}
-
 		function getGroceries() {
-		    return $http.get('groceries.json')
+		    return $http.get(API_URL + 'lists')
     		    .then(function(response) {
 		            return response.data;
     		    });
 		}
 
-		function getGrocery(name) {
-			return $http.get('groceries.json')
+		function getGrocery(id) {
+			return $http.get(API_URL + 'lists/' + id)
 				.then(function(response) {
-					return _.filter(response.data, ['name', name]).shift();
+					return response.data;
+				})
+		}
+
+		function postList(article) {
+			return $http.post(API_URL + 'addlist', article)
+				.then(function(response) {
+					console.log(article);
+					return response.data;
+					console.log(response);
 				})
 		}
 	}

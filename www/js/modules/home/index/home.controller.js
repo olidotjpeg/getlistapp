@@ -10,17 +10,14 @@
 		var userId = 1;
 
 		var vm 		= this;
-		vm.user;
 		vm.groceries;
 		vm.deleteGroceryItem = deleteGroceryItem;
 
 		activate();
 
 		function activate() {
-			GroceryFactory.getUser(userId).then(function(response) {
-				vm.user = response;
-				vm.user = vm.user.shift();
-				console.log(vm.user);
+			GroceryFactory.getGroceries().then(function(response) {
+				vm.groceries = response;
 			})
 		}
 

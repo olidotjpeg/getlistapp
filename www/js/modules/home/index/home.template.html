@@ -1,15 +1,13 @@
 <ion-header-bar>
-    <div class="buttons">
-        <button class="button">Left Button</button>
-    </div>
-    <h1 class="title">{{home.user.username}}</h1>
+    <h1 class="title">Home screen</h1>
 </ion-header-bar>
 
 <ion-content>
     <ion-list>
         <ion-item ng-repeat="item in home.groceries">
-            <a ui-sref="application.homeSingle({name: '{{item.name}}'})">{{item.name}}</a>
+            <a ui-sref="application.homeSingle({id: {{item.listid}}})">{{item.listname}}</a>
             <button class="button" ng-click="home.deleteGroceryItem(item.id)">D</button>
         </ion-item>
     </ion-list>
+    <button class="button button-calm create" ui-sref="application.homeCreate">+</button>
 </ion-content>

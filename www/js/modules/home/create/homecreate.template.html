@@ -1,0 +1,23 @@
+<ion-header-bar>
+    <h1 class="title">Create view</h1>
+</ion-header-bar>
+
+<ion-content>
+    <div class="list">
+        <form ng-submit="new.create();">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Shopping list name</span>
+                <input ng-model="new.name" type="text" placeholder="Shopping list name">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Shopping item</span>
+                <input ng-model="new.item" type="text" placeholder="Shopping item">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Description</span>
+                <input ng-model="new.description" type="text" placeholder="Description">
+            </label>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</ion-content>

@@ -12,8 +12,9 @@
 		activate();
 
 		function activate() {
-			GroceryFactory.getGrocery($stateParams.name).then(function(response) {
+			GroceryFactory.getGrocery($stateParams.id).then(function(response) {
 				vm.grocery = response;
+				vm.grocery = vm.grocery.shift();
 			})
 		}
 

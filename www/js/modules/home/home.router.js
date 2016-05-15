@@ -17,9 +17,21 @@
 				}
 			};
 
+			var Create = {
+				name: 'application.homeCreate',
+				url: '/list/new',
+				views: {
+					'main@application': {
+						templateUrl : 'js/modules/home/create/homecreate.template.html',
+						controller  : 'IndexCreate',
+						controllerAs: 'new'
+					}
+				}
+			};
+
 			var View = {
 				name: 'application.homeSingle',
-				url: '/list/:name',
+				url: '/list/:id',
 				views: {
 					'main@application': {
 						templateUrl : 'js/modules/home/view/homeview.template.html',
@@ -30,6 +42,7 @@
 			};
 
 			$stateProvider.state(Index);
+			$stateProvider.state(Create);
 			$stateProvider.state(View);
 		});
 })();
