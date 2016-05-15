@@ -3,9 +3,20 @@
     height: 100%;
 }
 
-.create {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+.mobile-content {
+    height: calc(90vh - 44px);
+}
+
+.collapsed-padding {
+    padding: 0;
+}
+
+.button.create {
+    margin: 0 auto;
+    background: transparent;
+    color: #000;
+    border-left: solid 1px #000;
+    border-right: solid 1px #000;
+    border-radius: 0;
+    padding: 0 15px;
 }

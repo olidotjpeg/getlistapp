@@ -3,11 +3,15 @@
 </ion-header-bar>
 
 <ion-content>
-    <ion-list>
-        <ion-item ng-repeat="item in home.groceries">
-            <a ui-sref="application.homeSingle({id: {{item.listid}}})">{{item.listname}}</a>
-            <button class="button" ng-click="home.deleteGroceryItem(item.id)">D</button>
-        </ion-item>
-    </ion-list>
-    <button class="button button-calm create" ui-sref="application.homeCreate">+</button>
+    <div class="mobile-content">
+        <ion-list>
+            <ion-item ng-repeat="item in home.groceries">
+                <a ui-sref="application.homeSingle({id: {{item.listid}}})">{{item.listname}}</a>
+                <button class="button" ng-click="home.deleteGroceryItem(item.id)">D</button>
+            </ion-item>
+        </ion-list>
+    </div>
 </ion-content>
+<ion-footer-bar class="collapsed-padding">
+    <button class="button button-calm create" ui-sref="application.homeCreate">+</button>
+</ion-footer-bar>
