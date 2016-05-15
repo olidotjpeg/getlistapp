@@ -1,4 +1,4 @@
-* Hello and Welcome to my App! *
+*Hello and Welcome to my App!*
 
 This repo is mainly for my stream - http://twitch.tv/stenkilde where I stream my creation of this app.
 
